@@ -163,7 +163,7 @@ body {
   flex-wrap: wrap;
 }
 
-.flex-item-left-panel {
+#flex-item-left-panel {
   font-size: 15px;
   justify-content: center;
   width: 15%;
@@ -174,7 +174,7 @@ body {
   border: 1px solid black;
 }
 
-.flex-item-middle-panel {
+#flex-item-middle-panel {
   /* align-items: center;
   justify-content: center; */
   display: flex;
@@ -187,7 +187,7 @@ body {
   border: 1px solid black;
 }
 
-.flex-item-right-panel {
+#flex-item-right-panel {
   justify-content: center;
   width: 10%;
   height: 100%;
@@ -206,7 +206,7 @@ div.gallery {
   margin: 10px;
   border: 1px solid rgb(0, 0, 0);
   float: left;
-  max-width: 222px;
+  /* max-width: 300px; */
 }
 
 div.gallery:hover {
@@ -214,11 +214,11 @@ div.gallery:hover {
 }
 
 div.gallery img {
-  /* align-items: center;
-  justify-content: center; */
-  width: 180px;
-  height: 180px;
-  margin: 20px;
+  width: 200px; /*can be in percentage also.*/
+  padding: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 div.desc {

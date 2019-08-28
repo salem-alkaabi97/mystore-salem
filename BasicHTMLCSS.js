@@ -3,6 +3,28 @@
 //   { name: "Salem", car: "VW" },
 //   { name: "Magic", car: "Bicycle" }
 // ];
+// var container = document.getElementById("container");
+// for (let obj of test) {
+//   for (let prop in obj) {
+//     var value = obj[prop];
+//     var div = document.createElement("div");
+//     div.innerHTML = value;
+//     container.appendChild(div);
+//   }
+// }
+//{
+///
+// var container = document.getElementById("container");
+// var div = document.createElement("div");
+// div1.innerHTML = obj[0].car;
+
+// var div1 = document.createElement("div1");
+// container.appendChild(div1);
+
+// var obj = { name: "Ashish", car: "Fortuner" };
+// for (let prop in obj) {
+//   var value = obj[prop];
+// }
 var test = [
   {
     product_id: "1",
@@ -32,41 +54,40 @@ var test = [
     description: "A gaming chair meant for long-term sitting time."
   }
 ];
-// var container = document.getElementById("container");
-// for (let obj of test) {
-//   for (let prop in obj) {
-//     var value = obj[prop];
-//     var div = document.createElement("div");
-//     div.innerHTML = value;
-//     container.appendChild(div);
-//   }
-// }
-{
-  /* <div class="gallery">
-<a target="_blank" href="./assets/gamingchair1.png"></a>
-<img src="./assets/gamingchair1.png" alt="gamingchair.png">
-</a>
-<div class="desc">DXRacer Gaming Chair Black/Yellow<br> Price: 1,200 AED</div>
-</div> */
-}
 
+// * <div class="gallery">
+// <a target="_blank" href="./assets/gamingchair1.png"></a>
+// <img src="./assets/gamingchair1.png" alt="gamingchair.png">
+// </a>
+// <div class="desc">DXRacer Gaming Chair Black/Yellow<br> Price: 1,200 AED</div>
+// </div> */
+// //}
 var container = document.getElementById("container");
 for (let obj of test) {
+  // div gallery has img tag only
   var gallery = document.createElement("div");
   gallery.className = "gallery";
+
+  //create tag img
+  var img = document.createElement("img");
+  img.src = obj.imageURL;
+  gallery.appendChild(img);
+
+  //div description has description only
   var description = document.createElement("div");
   description.className = "desc";
   description.innerHTML = getDescription(obj);
   gallery.appendChild(description);
-  for (let prop in obj) {
-    // create gallery
-    // if (prop == "name") {
-    // }
-    // var value = obj[prop];
-    // var div = document.createElement("div");
-    // div.innerHTML = value;
-    // container.appendChild(gallery);
-  }
+
+  // for (let prop in obj) {
+  //   // create gallery
+  //   // if (prop == "name") {
+  //   // }
+  //   // var value = obj[prop];
+  //   // var div = document.createElement("div");
+  //   // div.innerHTML = value;
+  //   // container.appendChild(gallery);
+  // }
   container.appendChild(gallery);
 }
 function getDescription(element) {
@@ -81,14 +102,3 @@ function getDescription(element) {
     element.description
   );
 }
-// var container = document.getElementById("container");
-// var div = document.createElement("div");
-// div1.innerHTML = obj[0].car;
-
-// var div1 = document.createElement("div1");
-// container.appendChild(div1);
-
-// var obj = { name: "Ashish", car: "Fortuner" };
-// for (let prop in obj) {
-//   var value = obj[prop];
-// }
