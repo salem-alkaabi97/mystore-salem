@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<head>
+  <style>
+    #flex-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      border: 1px black solid;
+      margin: 0 auto;
+    }
+
+    .flex-item {
+      width: 300px;
+      height: 1000px;
+      border: 1px black solid;
+      background: #369;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="flex-container">
+    <div class="flex-item">
+      <h4 align="center" id="product-header" style="font-family:verdana;">
+        Products Filter
+      </h4>
+      <div class="filter">
+        <h5 style="font-family:verdana;">Search By Popular Brands</h5>
+        <label class="container">
+          <input type="checkbox" />
+          <span class="checkmark"></span>
+          LG</label
+        >
+        <br />
+        <label class="container">
+          <input type="checkbox" />
+          <span class="checkmark"></span>
+          Toshiba</label
+        >
+        <br />
+        <label class="container">
+          <input type="checkbox" />
+          <span class="checkmark"></span>
+          DxRacer</label
+        >
+        <br />
+        <label class="container">
+          <input type="checkbox" />
+          <span class="checkmark"></span>
+          HP</label
+        >
+        <br />
+        <label class="container">
+          <input type="checkbox" />
+          <span class="checkmark"></span>
+          Dell</label
+        >
+        <br />
+        <label class="container">
+          <input type="checkbox" />
+          <span class="checkmark"></span>
+          Apple</label
+        >
+        <br />
+        <label class="container">
+          <input type="checkbox" />
+          <span class="checkmark"></span>
+          Samsung</label
+        >
+        <br />
+      </div>
+      <div class="filter">
+        <h5 style="font-family:verdana;">Search By Your Favorite Color</h5>
+        <label class="container">
+          <input type="checkbox" />
+          <span class="checkmark"></span>
+          Red</label
+        >
+        <br />
+        <label class="container">
+          <input type="checkbox" />
+          <span class="checkmark"></span>
+          Green</label
+        >
+        <br />
+        <label class="container">
+          <input type="checkbox" />
+          <span class="checkmark"></span>
+          White</label
+        >
+        <br />
+        <label class="container">
+          <input type="checkbox" />
+          <span class="checkmark"></span>
+          Black</label
+        >
+        <br />
+        <label class="container">
+          <input type="checkbox" />
+          <span class="checkmark"></span>
+          Blue</label
+        >
+        <br />
+        <label class="container">
+          <input type="checkbox" />
+          <span class="checkmark"></span>
+          Yellow</label
+        >
+        <br />
+        <label class="container">
+          <input type="checkbox" />
+          <span class="checkmark"></span>
+          Orange</label
+        >
+        <br />
+      </div>
+      <div class="filter">
+        <h5 style="font-family:verdana;">Search By Your Budget Price (AED)</h5>
+        <form action="/action_page.php">
+          From
+          <br />
+          <input type="number" />
+          <br />
+          To
+          <br />
+          <input type="number" /><br /><br />
+          <input type="submit" />
+        </form>
+      </div>
+      <div class="filter">
+        <h5 style="font-family:verdana;">
+          Search By The Available Discount Percentages
+        </h5>
+        <form action="/action_page.php">
+          Search by discount amount %:
+          <input type="number" /><br />
+          <br />
+          <input type="submit" />
+        </form>
+      </div>
+    </div>
+    <div class="flex-item">
+      
+    </div>
+    <div class="flex-item"></div>
+  </div>
+</body>
