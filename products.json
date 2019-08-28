@@ -52,5 +52,32 @@
     "price": "1200 AED",
     "imageURL": "./assets/gamingchair.png",
     "description": "A gaming chair meant for long-term sitting time."
+  },
+  {
+    "product_id": "3",
+    "name": "DXRacer Gaming Chair",
+    "brand": "DXRacer",
+    "color": "Orange/Black",
+    "price": "1200 AED",
+    "imageURL": "./assets/gamingchair.png",
+    "description": "A gaming chair meant for long-term sitting time."
+  },
+  {
+    "product_id": "3",
+    "name": "DXRacer Gaming Chair",
+    "brand": "DXRacer",
+    "color": "Orange/Black",
+    "price": "1200 AED",
+    "imageURL": "./assets/gamingchair.png",
+    "description": "A gaming chair meant for long-term sitting time."
+  },
+  {
+    "product_id": "3",
+    "name": "DXRacer Gaming Chair",
+    "brand": "DXRacer",
+    "color": "Orange/Black",
+    "price": "1200 AED",
+    "imageURL": "./assets/gamingchair.png",
+    "description": "A gaming chair meant for long-term sitting time."
   }
 ]

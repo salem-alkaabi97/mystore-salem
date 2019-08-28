@@ -1,3 +1,4 @@
+// Fetch data
 var prodData;
 var promise = fetch("./products.json");
 promise
@@ -8,6 +9,7 @@ promise
     prodData = data;
     createProducts(data);
   });
+
 function createProducts(test) {
   // we will get the id of the middle panel here
   var middlePanel = document.getElementById("flex-item-middle-panel");
@@ -31,6 +33,7 @@ function createProducts(test) {
     middlePanel.appendChild(gallery);
   }
 }
+// get description
 function getDescription(element) {
   return (
     "Name: " +

@@ -44,7 +44,6 @@ body {
   border-radius: 5px;
   text-align: center;
 }
-
 .search {
   position: relative;
   display: flex;
@@ -64,7 +63,6 @@ body {
   height: 35px;
   border-radius: 5px 0 0 5px;
   outline: none;
-  color: #9dbfaf;
 }
 
 .searchTerm:focus {
@@ -180,7 +178,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 70%;
+  width: 60%;
   height: 100%;
   background: whitesmoke;
   margin: 10px;
@@ -189,7 +187,7 @@ body {
 
 #flex-item-right-panel {
   justify-content: center;
-  width: 10%;
+  width: 15%;
   height: 100%;
   background: whitesmoke;
   padding: 15px;
@@ -206,7 +204,7 @@ div.gallery {
   margin: 10px;
   border: 1px solid rgb(0, 0, 0);
   float: left;
-  /* max-width: 300px; */
+  max-width: 300px;
 }
 
 div.gallery:hover {
@@ -224,7 +222,7 @@ div.gallery img {
 div.desc {
   padding: 15px;
   width: auto;
-  height: 100px;
+  height: 150px;
   text-align: center;
 }
 
