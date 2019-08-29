@@ -41,8 +41,8 @@
       <img alt="logo" src="./assets/logo.png">
     </div>
     <div id="flex-item-middle-panel-header">
-      <input type="text" class="searchTerm"  style="text-align: center" placeholder="What are you looking for?">
-      <button type="submit" class="searchButton">
+      <input type="text" id= "searchTerm" class="searchTerm"  style="text-align: center" placeholder="What are you looking for?">
+      <button onclick="filterdProducts()" type="submit" id= "searchButton" class="searchButton">
         <i class="fa fa-search"></i>
       </button>
     </div>
@@ -53,7 +53,7 @@
       </div>
       <div class="cart">
         <i class="material-icons">shopping_cart</i>
-        <span>1 Item</span>
+        <span id="cartCount">0</span>
       </div>
     </div>
   </div>
@@ -188,7 +188,6 @@
       </div>
     </div>
     <div id="flex-item-middle-panel">
-    
     </div>
     <div id="flex-item-right-panel">
       <h3 style="font-weight: bold;">Want to advertise something?</h3>

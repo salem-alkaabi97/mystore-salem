@@ -10,6 +10,17 @@ promise
     createProducts(data);
   });
 
+function filterdProducts() {
+  var search_input = document.getElementById("searchTerm").value;
+  document.getElementById("flex-item-middle-panel").innerHTML = "";
+  createProducts(
+    prodData.filter(value => {
+      var lowerCaseProduct = value.description.toLocaleLowerCase();
+      return lowerCaseProduct.includes(search_input);
+    })
+  );
+}
+
 function createProducts(test) {
   // we will get the id of the middle panel here
   var middlePanel = document.getElementById("flex-item-middle-panel");
@@ -29,11 +40,18 @@ function createProducts(test) {
     description.className = "desc";
     description.innerHTML = getDescription(obj);
     gallery.appendChild(description);
-    //Create button
+    //Create button + assign onClick event
     var button = document.createElement("button");
+    //assign class + id name;
     button.className = "buttonstyle";
+    button.id = "AddButton";
+    //assign onclick
+    button.onclick = incrementCartAmount;
+    //assign button value
     button.innerHTML = "Add To Cart";
+    //assign width
     button.style.width = "100%";
+
     gallery.appendChild(button);
 
     //Adding this div to the container (middlepanel)
@@ -56,4 +74,15 @@ function getDescription(element) {
     element.description +
     "<br>"
   );
+}
+function incrementCartAmount() {
+  var currentCount = document.getElementById("cartCount");
+  var currentCountParsed = parseInt(currentCount.textContent);
+  var nextCount = counter(currentCountParsed);
+  // console.log(currentCount);
+  currentCount.innerHTML = nextCount;
+}
+function counter(currentCountParsed) {
+  // var cartCount = cartCount.value;
+  return currentCountParsed + 1;
 }
