@@ -29,23 +29,31 @@ function createProducts(test) {
     description.className = "desc";
     description.innerHTML = getDescription(obj);
     gallery.appendChild(description);
+    //Create button
+    var button = document.createElement("button");
+    button.className = "buttonstyle";
+    button.innerHTML = "Add To Cart";
+    button.style.width = "100%";
+    gallery.appendChild(button);
 
+    //Adding this div to the container (middlepanel)
     middlePanel.appendChild(gallery);
   }
 }
 // get description
 function getDescription(element) {
   return (
-    "Name: " +
+    "<strong>Name: </strong>" +
     element.name +
     "<br>" +
-    " Color: " +
+    " <strong>Color:</strong> " +
     element.color +
     "<br>" +
-    " Price: " +
+    " <strong>Price:</strong> " +
     element.price +
     "<br>" +
-    " Description: " +
-    element.description
+    " <strong>Description:</strong> " +
+    element.description +
+    "<br>"
   );
 }
