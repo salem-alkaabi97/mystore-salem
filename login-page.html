@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="style-login.css" />
+    <title>Login Page</title>
+  </head>
+
+  <body oncontextmenu="return false">
+    <div class="body"></div>
+    <div class="grad"></div>
+    <div class="header">
+      <div>Salem <span>K.</span></div>
+    </div>
+    <br />
+    <form name="login">
+      <div class="login">
+        <input
+          type="text"
+          placeholder="Enter the username"
+          name="userid"
+        /><br />
+        <input
+          type="password"
+          placeholder="Enter the password"
+          name="pswrd"
+        /><br />
+        <input type="button" onclick="check(this.form)" value="Login" />
+      </div>
+    </form>
+    <script src="login-js.js"></script>
+  </body>
+</html>
