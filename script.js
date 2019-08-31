@@ -76,6 +76,7 @@ function getDescription(element) {
   );
 }
 function incrementCartAmount() {
+  // cartCount is the span tag id in my html
   var currentCount = document.getElementById("cartCount");
   var currentCountParsed = parseInt(currentCount.textContent);
   var nextCount = counter(currentCountParsed);
@@ -85,4 +86,7 @@ function incrementCartAmount() {
 function counter(currentCountParsed) {
   // var cartCount = cartCount.value;
   return currentCountParsed + 1;
+}
+function logout() {
+  location.replace("login-page.html");
 }
