@@ -69,7 +69,6 @@ function createProducts(test) {
     middlePanel.appendChild(gallery);
   }
 }
-
 // get description
 function getDescription(element) {
   return (
@@ -87,7 +86,6 @@ function getDescription(element) {
     "<br>"
   );
 }
-
 // Increment Cart Amount
 function incrementCartAmount() {
   var currentUser = document.getElementById("userID").value;
@@ -103,5 +101,23 @@ function counter(counter) {
 }
 // Logout functions takes you back to the loginpage
 function logout() {
+  alert("You will be logged out now..");
+  location.replace("logout-page.html");
+}
+function loginPage() {
   location.replace("login-page.html");
+}
+function suggestionsPage() {
+  location.replace("feedback-page.html");
+}
+function productsPage() {
+  location.replace("main.html");
+}
+function postbtn() {
+  alert("Feedback posted succesfully, you will be contacted soon!");
+}
+// When the user clicks on div, open the popup
+function popupFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
 }

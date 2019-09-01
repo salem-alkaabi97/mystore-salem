@@ -1,34 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" type="text/css" href="style-login.css" />
-    <title>Login Page</title>
+    <link rel="stylesheet" href="style-logout.css" />
+    <title>Logout Page</title>
   </head>
-
-  <body oncontextmenu="return false">
-    <h1>Thanks for using our site</h1>
-    <div class="body"></div>
-    <div class="grad"></div>
-    <div class="header">
-      <div>Salem <span>K.</span></div>
+  <body>
+    <div id="div_container">
+      <span class="spanFONT">
+        Thanks for using our website, hope you had a great time!
+      </span>
+      <br />
+      <br />
+      <span class="spanFONT" onclick="loginPage()" id="clickhere"
+        >Click here</span
+      >
+      <span>to go back to the login page</span>
+      <br />
+      <br />
+      <span class="spanFONT" onclick="suggestionsPage()" id="clickhere"
+        >OR Click here</span
+      >
+      <span>to go back to the suggestions/feedback page</span>
     </div>
-    <br />
-    <form name="login">
-      <div class="login">
-        <input
-          type="text"
-          placeholder="Enter the username"
-          name="userid"
-        /><br />
-        <input
-          type="password"
-          placeholder="Enter the password"
-          name="pswrd"
-        /><br />
-        <input type="button" onclick="check(this.form)" value="Login" />
-      </div>
-    </form>
-    <script src="login-js.js"></script>
+
+    <script src="script.js"></script>
   </body>
 </html>
