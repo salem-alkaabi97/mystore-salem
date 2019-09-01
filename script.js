@@ -1,4 +1,4 @@
-// Fetch data
+// Fetch data from the jason file products.json
 var prodData;
 var promise = fetch("./products.json");
 promise
@@ -10,6 +10,7 @@ promise
     createProducts(data);
   });
 
+// Filter products based on the search term I entered
 function filterdProducts() {
   var search_input = document.getElementById("searchTerm").value;
   document.getElementById("flex-item-middle-panel").innerHTML = "";
@@ -20,8 +21,18 @@ function filterdProducts() {
     })
   );
 }
-
+// Create products depends on the user I logged in as.
 function createProducts(test) {
+  document.getElementById("userID").value = localStorage.getItem("username");
+  document.getElementById("userID").innerHTML = localStorage.getItem(
+    "username"
+  );
+  document.getElementById("cart-counter").value = localStorage.getItem(
+    document.getElementById("userID").value
+  );
+  document.getElementById("cart-counter").innerHTML = localStorage.getItem(
+    document.getElementById("userID").value
+  );
   // we will get the id of the middle panel here
   var middlePanel = document.getElementById("flex-item-middle-panel");
   for (let obj of test) {
@@ -58,6 +69,7 @@ function createProducts(test) {
     middlePanel.appendChild(gallery);
   }
 }
+
 // get description
 function getDescription(element) {
   return (
@@ -75,18 +87,21 @@ function getDescription(element) {
     "<br>"
   );
 }
+
+// Increment Cart Amount
 function incrementCartAmount() {
-  // cartCount is the span tag id in my html
-  var currentCount = document.getElementById("cartCount");
+  var currentUser = document.getElementById("userID").value;
+  var currentCount = document.getElementById("cart-counter");
   var currentCountParsed = parseInt(currentCount.textContent);
-  var nextCount = counter(currentCountParsed);
-  // console.log(currentCount);
-  currentCount.innerHTML = nextCount;
+  var NewCount = counter(currentCountParsed);
+  currentCount.innerHTML = NewCount;
+  localStorage.setItem(currentUser, NewCount);
 }
-function counter(currentCountParsed) {
-  // var cartCount = cartCount.value;
-  return currentCountParsed + 1;
+// Counter function used by Increment Cart Amount Function
+function counter(counter) {
+  return counter + 1;
 }
+// Logout functions takes you back to the loginpage
 function logout() {
   location.replace("login-page.html");
 }
